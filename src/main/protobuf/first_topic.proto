@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "com.mps.produceData.proto";
+option java_outer_classname = "CCAssociatedDataEventWrapper";
+option java_multiple_files = true;
+
+message CCAssociatedDataEvent {
+
+    message AssociatedDataDTOList {
+        string dcode = 1;
+        string ccode = 2;
+        string bunit = 3;
+    }
+
+    string tpName = 1;
+    repeated AssociatedDataDTOList associatedDataDTOList = 2;
+}
